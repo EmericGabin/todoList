@@ -4,6 +4,7 @@ class Task {
         this.completed = false
         this.id = this.uuid()
         this.listOfTasks = listOfTasks
+        this.listOfTasks.push(this)
         this.createTemplate()
         this.addListeners()
     }
@@ -38,6 +39,8 @@ class Task {
 
     delete(){
         this.template.remove()
+        this.listOfTasks.splice(this, 1)
+        console.log(this.listOfTasks)
     }
 
     uuid() {

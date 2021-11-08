@@ -1,4 +1,3 @@
-
 let listOfTodo = []
 let btnAdd = document.querySelector(".btnAjouter")
 let tbody = document.querySelector(".tbody")
@@ -8,18 +7,6 @@ let inputText = document.querySelector(".todoText")
 let taskId = 0
 var task
 
-
-// function showTodo(){
-//     let ligneTodo = document.createElement("tbody")
-//     let html
-//     listOfTodo.forEach(e => {
-//         html = ` <tr>
-//             <th scope="row">${e.value}</th>
-//             <td><button class="btn btn-outline-dark">X</button></td>
-//         </tr> `
-//     });
-//     ligneTodo.innerHTML = html
-// }
 function addListener(){
     btnAdd.addEventListener("click", addTask)
     
@@ -27,10 +14,9 @@ function addListener(){
 
 function addTask(){
     const value = inputText.value
-    task = new Task(value)
+    task = new Task(value, listOfTodo)
     inputText.value = ''
     tbody.append(task.template)
-    listOfTodo.push(task)
     console.log(listOfTodo)
 
     //const btnDelete = task.template.querySelector(".btnDelete")
@@ -46,7 +32,6 @@ function addTask(){
     //taskId++
 
 }
-
 
 addListener()
 
