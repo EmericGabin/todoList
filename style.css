@@ -1,0 +1,17 @@
+.container{
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+    background-color: grey;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.table{
+    margin-top: 50px;
+}
+
+.active > th{
+    text-decoration : line-through;
+    opacity: 0.4;
+}
